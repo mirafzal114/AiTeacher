@@ -113,3 +113,14 @@ def dict_view(request):
         return render(request, 'aiapp/dictionary.html', {'result':result,
                                                          'word':word})
     return render(request, 'aiapp/home.html')
+
+
+
+def about(request):
+    return render(request, 'aiapp/about.html')
+
+def contact(request):
+    return render(request, 'aiapp/contact.html')
+
+def service(request):
+    return render(request, 'aiapp/service.html')

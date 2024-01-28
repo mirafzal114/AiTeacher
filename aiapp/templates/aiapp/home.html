@@ -27,15 +27,20 @@
                 essay and give you a grade on the ielts writing scale.
                 and then we'll show you your mistakes and then at the end you can
                 see a perfect example for your topic &#128512;
-
                 </h3>
-                <form method="post" action="{% url 'result' %}">
-                {% csrf_token %}
+            <div id="loading-overlay" style="display: none;">
+                <h2 style="text-align: center">We are checking
+                    <br>please wait &#128522;
+                </h2>
+                <div id="loading-spinner"></div>
+            </div>
+            <div id="main-content">
+                <form method="post" action="{% url 'result' %}" onsubmit="return showLoading();">
+                    {% csrf_token %}
                     <textarea name="essay_text" id="essay_text" placeholder="Write your essay here..." class="essay"></textarea>
-                    <input  type="submit" class="check" value="Submit" Check Essay >
-                    {#        <input type="submit" value="Submit">#}
-                    {#        <textarea name="essay_text" id="essay_text" rows="10" cols="30"></textarea><br>#}
+                    <input type="submit" class="check" value="Submit" Check Essay>
                 </form>
+            </div>
             </div>
             <div class="right">
                 <img height="400" src="{% static 'logo/zyro-image__1_-removebg-preview.png' %}" alt="">
@@ -73,4 +78,25 @@
         </div>
     </div>
 
+
+    <script>
+function showLoading() {
+    // Показываем анимацию загрузки
+    document.getElementById("loading-overlay").style.display = "flex";
+    // Отключаем кнопку Submit
+    document.getElementById("essay-form").submit();
+}
+
+window.onload = function () {
+    // Отключаем анимацию после загрузки страницы (если нужно)
+    hideLoading();
+};
+
+function hideLoading() {
+    // Скрываем анимацию после загрузки
+    document.getElementById("loading-overlay").style.display = "none";
+}
+
+
+    </script>
 {% endblock content %}

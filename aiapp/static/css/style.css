@@ -207,14 +207,129 @@ padding-top: 40px;
 .essay-result>h3{
     font-family: "Satisfy", cursive;
 }
-
+/*end essay result*/
 .grade{
     margin-top: 15px;
 }
 .mistakes{
     margin-top: 20px;
 }
-
+/*advice page*/
 .advice-page{
     display: flex;
+}
+
+/*end advice page*/
+
+/*about page*/
+.about{
+    width: 80%;
+    margin:auto;
+
+}
+
+/*animation */
+#loading-overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(204, 119, 200, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loading-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/*contact*/
+.content-page{
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+.lf-c{
+    width: 50% ;
+}
+
+.body-contact{
+    padding: 0 30px;
+}
+.body-contact>h2{
+    margin-top: 35px;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+}
+.body-contact>p{
+    margin-top: 20px;
+    font-family: "Satisfy", cursive;
+    line-height: 1.4;
+    letter-spacing: 3px;
+}
+.buttons{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.buttons>a{
+  text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+
+}
+.buttons>a:hover{
+  color: red;
+
+}
+
+
+/*end contact*/
+
+.cards{
+    width: 80%;
+    margin:auto;
+    margin-top: 40px;
+    height: 100vh;
+    /*background-color: beige;*/
+}
+.card{
+    width: 100%;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.73);
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.46);
+}
+.card-img{
+    width: 27%;
+    padding: 5px 8px;
+
+}
+
+.description{
+    width: 73%;
+    padding: 4px 10px;
+}
+.description>h1{
+    margin-top: 20px;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+.description>p{
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
