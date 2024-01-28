@@ -120,7 +120,23 @@ This project uses Docker to manage its environment. To run it locally, follow th
 
 Your project should now be available in your browser at `https://localhost:1212/posts`. - Here `posts/` means this from application Django.
 
-5. Home Page:
+4. Home Page:
     ```
     https://localhost:1212/
     ```
+
+
+
+## Contribute ##
+**If you would like to contribute to the app please follow these steps:**
+
+1. Fork the repository on GitHub.
+2. Clone your forked repository to your local machine.
+3. Create a new branch for your feature or bug fix.
+4. Make changes and commit with descriptive messages.
+5. Submit your changes to your repository fork.
+6. Create a pull request to the main repository.
+
+## Contacts
+**If you have any questions or suggestions regarding the application, please contact us at mirafzaaal2609@gmail.com We value your opinion!
+
