@@ -22,7 +22,7 @@
                 </p>
                 <div class="feed-back">
                     <h2>Write your feed Back we will happy to read it  &#128512;</h2>
-                    <p>Before you have to <a style="text-decoration: none" href="{% url 'reigster' %}">sign up</a></p>
+                    <p>Before you have to <a style="text-decoration: none" href="{% url 'register' %}">sign up</a></p>
                     <form method="post" action="{% url 'feedback' %}">
                         {% csrf_token %}
                     <input class="feedback-field" placeholder="Write your feedback" type="text" name="feedback">

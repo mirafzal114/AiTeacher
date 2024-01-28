@@ -192,13 +192,11 @@ def service(request):
     return render(request, 'aiapp/service.html')
 
 
-
-def register(request):
+def register_view(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            User.objects.create(user=user)
+            form.save()
             return redirect('login')
     else:
         form = RegisterForm()

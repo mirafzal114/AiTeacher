@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 body{
     background-color: rgb(243, 64, 147);
     /*justify-content: flex-end;*/
