@@ -47,5 +47,39 @@ You can write to us and share your feedback.
 1. Clone the repository:
    ```bash
    git clone https://github.com/mirafzal114/AiTeacher.git
-  ```
+  
 
+
+## Project using Docker
+### Now if you have Docker, see the project to use it with.
+
+This project uses Docker to manage its environment. To run it locally, follow these steps:
+
+### Steps to start the project
+
+### Install Docker
+
+1. Make sure you have Docker installed on your computer.
+2. If Docker is not installed, you can download it [from here](https://docs.docker.com/get-docker/) and install it according to the instructions for your operating system.
+
+### Start the project
+### We have already entered the repositories with `pipenv` before, now we will continue with the next one, but you first enter your `Docker Desktop` application if you do not have `Linux` of course:
+1. Create a Docker image by running the command: 
+    ```
+    $ docker build -t aiteacher .
+    ```
+2. Once the image has been successfully created, start the container: 
+    ```
+    $ docker run -p 1212:8000 aiteacher
+    ```
+3. Check ``Dockerfile`` if you do not have an image download from ``Docker Hub``:
+    ````bash
+    $ docker pull python:3.11-alpine
+    ````
+
+Your project should now be available in your browser at `https://localhost:1212/posts`. - Here `posts/` means this from application Django.
+
+5. Home Page:
+    ```
+    https://localhost:1212/
+    ```
