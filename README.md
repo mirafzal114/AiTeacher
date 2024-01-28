@@ -6,37 +6,46 @@ Welcome to AI Teacher - your comprehensive tool for preparing for IELTS exams an
 
 This project aims to assist you in various ways:
 
-- **Dictionary Feature:**
-  - Utilize our dictionary for meanings, grammatical structures, and examples of usage.
-  
-  ![Dictionary](https://github.com/mirafzal114/AiTeacher/assets/136591233/11a05fa6-2e21-46b5-9c24-87072f66b3f7)
+### Dictionary Feature:
 
-- **Essay Checking:**
-  - Submit your essays for review and receive an approximate IELTS score.
-  - Get detailed feedback highlighting your mistakes.
+Utilize our dictionary for meanings, grammatical structures, and examples of usage.
 
-- **Sample Essay Writing:**
-  - Receive professionally written sample essays for your chosen topics.
+![Dictionary](https://github.com/mirafzal114/AiTeacher/assets/136591233/11a05fa6-2e21-46b5-9c24-87072f66b3f7)
 
-## Screenshots
-![EssayCheking.M](https://github.com/mirafzal114/AiTeacher/assets/136591233/baead5cd-de53-4b40-88e7-cfe9fdf54576)
+### Essay Checking:
 
-- **Help with idea**
-  - Submit your topic for review and receive more ideas.
-  - Get more information about your topic
+Submit your essays for review and receive an approximate IELTS score. Get detailed feedback highlighting your mistakes.
 
-![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/960fc123-776f-451c-b96a-a8b10ec25a29)
+![Essay Checking](https://github.com/mirafzal114/AiTeacher/assets/136591233/baead5cd-de53-4b40-88e7-cfe9fdf54576)
 
+### Sample Essay Writing:
 
-![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/be71df4c-bd13-4579-8a78-a899c8b0cf86)
+Receive professionally written sample essays for your chosen topics.
 
-### Also we more functions for your which is very useful for u
-![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/a70dad47-4fb3-442a-9373-9ec3e4cfa78c)
+### Help with Ideas:
+
+Submit your topic for review and receive more ideas. Get more information about your topic.
+
+![Help with Ideas](https://github.com/mirafzal114/AiTeacher/assets/136591233/960fc123-776f-451c-b96a-a8b10ec25a29)
+
+![More Ideas](https://github.com/mirafzal114/AiTeacher/assets/136591233/be71df4c-bd13-4579-8a78-a899c8b0cf86)
+
+### Additional Functions:
+
+Explore more functions that are very useful for you.
+
+![Additional Functions](https://github.com/mirafzal114/AiTeacher/assets/136591233/a70dad47-4fb3-442a-9373-9ec3e4cfa78c)
+
+### Provide Feedback:
+
+You can write to us and share your feedback.
+
+![Provide Feedback](https://github.com/mirafzal114/AiTeacher/assets/136591233/3959e6aa-59e1-479a-b825-814706ca83bf)
 
 ## Getting Started
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/mirafzal114/AiTeacher.git
-   ```
-   
+  ```
+
