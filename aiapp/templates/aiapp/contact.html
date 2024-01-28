@@ -25,7 +25,7 @@
                     <p>Before you have to <a style="text-decoration: none" href="{% url 'reigster' %}">sign up</a></p>
                     <form method="post" action="{% url 'feedback' %}">
                         {% csrf_token %}
-                    <input class="feedback_" placeholder="write your feed back " type="text">
+                    <input class="feedback-field" placeholder="Write your feedback" type="text" name="feedback">
                     <button class="check" type="submit">Submit</button>
                     </form>
                 </div>

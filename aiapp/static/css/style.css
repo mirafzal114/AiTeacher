@@ -302,12 +302,6 @@ padding-top: 40px;
   color: #ec1919;
 
 }
-.feedback_{
-    padding: 10px;
-    border-radius: 20px;
-    width: 100%;
-    margin-top: 10px;
-}
 
 
 /*end contact*/
@@ -411,7 +405,14 @@ padding-top: 40px;
 }
 
 .regist{
+    opacity: 0.6;
     width: 100%;
     padding: 8px;
     border-radius: 20px;
+}
+.feedback-field{
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    margin-top: 10px;
 }

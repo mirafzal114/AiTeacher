@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 import os
 from dotenv import load_dotenv
@@ -204,7 +205,7 @@ def register(request):
 
     return render(request, 'aiapp/register.html', {'form': form})
 
-
+@login_required
 def feedback_view(request):
     if request.method == 'POST':
         form = FeedBackForm(request.POST)
@@ -213,7 +214,7 @@ def feedback_view(request):
             feedback_instance.user = request.user
             feedback_instance.save()
             messages.success(request, 'Thanks for your feedback!')
-            return redirect('contact-page')
+            return redirect('home-page')
     else:
         form = FeedBackForm()
 
