@@ -234,6 +234,7 @@ span {
 .about {
     width: 80%;
     margin: auto;
+    height: 100%;
 }
 
 /* Animation */
@@ -272,6 +273,7 @@ span {
     display: flex;
     width: 80%;
     margin: 30px auto;
+    height: 80%;
 }
 
 .lf-c {
@@ -317,7 +319,7 @@ span {
     width: 80%;
     margin: auto;
     margin-top: 40px;
-    height: 100vh;
+    height: 100%;
 }
 
 .card {
@@ -398,7 +400,6 @@ span {
     width: 80%;
     margin: auto;
     height: 100vh;
-
     display: flex;
 }
 .regis-img{
