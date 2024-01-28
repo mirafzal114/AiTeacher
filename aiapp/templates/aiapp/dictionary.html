@@ -6,7 +6,6 @@
 {% block content %}
     <div class="essay-result">
         <h1>Welcome to Ai <span>dictionary</span></h1>
-        <h3>{{ word }}</h3>
-        <h4>{{ result }}</h4>
+        {{ result|safe}}
     </div>
 {% endblock content %}

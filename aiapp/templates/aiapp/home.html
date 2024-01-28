@@ -29,7 +29,7 @@
                 see a perfect example for your topic &#128512;
                 </h3>
             <div id="loading-overlay" style="display: none;">
-                <h2 style="text-align: center">We are checking
+                <h2  style="text-align: center; font-family: 'Lucida Grande', Arial, sans-serif; margin-left: 10px;">We are checking
                     <br>please wait &#128522;
                 </h2>
                 <div id="loading-spinner"></div>
@@ -63,7 +63,7 @@
                 <img src="{% static 'logo/s-removebg-preview.png' %}" alt="">
             </div>
         </div>
-        <div class="advice-page">
+        <div style="display:flex;" class="advice-page">
             <div style="margin-top:100px" class="left">
                 <h3>
                     If you have difficulty with ideas for writing essays or for your speaking topics or lack vocabulary &#128543
@@ -79,24 +79,26 @@
     </div>
 
 
-    <script>
+<script>
 function showLoading() {
-    // Показываем анимацию загрузки
     document.getElementById("loading-overlay").style.display = "flex";
-    // Отключаем кнопку Submit
     document.getElementById("essay-form").submit();
 }
 
 window.onload = function () {
-    // Отключаем анимацию после загрузки страницы (если нужно)
     hideLoading();
 };
 
 function hideLoading() {
-    // Скрываем анимацию после загрузки
     document.getElementById("loading-overlay").style.display = "none";
 }
 
-
     </script>
+
 {% endblock content %}
+<div class="footers">
+    <div class="about-me"></div>
+    <div class="products"></div>
+    <div class="useful-link"></div>
+    <div class="contact"></div>
+</div>

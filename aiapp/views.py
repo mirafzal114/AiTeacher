@@ -5,8 +5,6 @@ from dotenv import load_dotenv
 from openai import OpenAI
 
 load_dotenv()
-
-
 def ielts_checking(txt):
     api_key = os.getenv("demokey")
 
@@ -26,45 +24,38 @@ def ielts_checking(txt):
             answer about this essay like this :
             your ielts writing score: (write an approximate ielts writing task2 grade for this essay.)
             your mistakes:
-            (which sentences which grammatical errors)
-            1. ....
-            2. ....
-            3. ....
-            4. ....
-            5. ....
+        
+            .......
 
-            here is a perfect example for your topic:
-            ..............
-            ..............
+            Here is a perfect example for your topic:
+            (write here perfect essay example)
+            
+            display the answer nicely with design html and css code 
+            like this <h1>your ielts writing score:</h1>....
+            make the design text very beautiful 
+            and '<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                <meta charset="UTF-8">
+                <body>'
+                 those parts don't need to be written
             '''}
         ],
         model="gpt-3.5-turbo",
     )
 
+    # Extract relevant information from the model response
     response_content = chat_completion.choices[0].message.content
+    # Parse the response and format it as needed
+    return response_content
 
-    grade_match = re.search(r'Your IELTS writing score.*', response_content)
-    mistakes_match = re.search(r'Your mistakes:(.*?)(?=Here is a perfect example for your topic:)', response_content, re.DOTALL)
-    example_match = re.search(r'Here is a perfect example for your topic:(.*)', response_content, re.DOTALL)
-
-    grade = grade_match.group(0).strip() if grade_match else "Оценка не найдена"
-    mistakes = mistakes_match.group(0).strip() if mistakes_match else "Ошибки не найдены"
-    example = example_match.group(0).strip() if example_match else "Пример не найден"
-
-    dic_res = {
-        'grade': grade,
-        'mistakes': mistakes,
-        'example':example
-    }
-    return dic_res
 
 def ielts_checking_view(request):
     if request.method == 'POST':
         essay_text = request.POST.get('essay_text', '')
         result = ielts_checking(essay_text)
-        return render(request, 'aiapp/essey.html', {'grade': result['grade'],
-                                                   'mistakes':result['mistakes'],
-                                                   'example':result['example']})
+        result_end = result
+        return render(request, 'aiapp/essey.html', {'grade':result_end})
     return render(request, 'aiapp/home.html')
 
 
@@ -82,21 +73,57 @@ def dictionary(word):
             {
                 "role": "user",
                 "content": f'''
-write it like this 
+give information about this word '{word}'
+answer like this 
+<style>
+    #definition,
+    #examples 
+        background-color: #f8f8f8;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    
 
-{word} - <definition>.
+    h2 
+        color: #333;
+    
 
-synonyms for the word :
-......
+    p 
+        color: #555;
+        line-height: 1.6;
+    
+    strong 
+        color: #007BFF;
+    
 
-antonyms for this word:
-........
+    ol 
+        list-style-type: decimal;
+        padding-left: 20px;
+    
 
-grammatical position:
-........
+    li 
+        margin-bottom: 8px;
+    
+</style>
 
-examples using this word 
-........
+<h2>Definition:</h2>
+<div id="definition">
+    <p>"Find" is a verb that denotes the act of discovering or locating something, often as a result of searching,
+        exploring, or investigating.</p>
+</div>
+
+<h2>Examples:</h2>
+<div id="examples">
+    <ol>
+        <li><strong>Discovering something:</strong> While hiking in the woods, I found a beautiful waterfall.</li>
+        <li><strong>Locating someone or something:</strong> I need to find my glasses before I can start reading.</li>
+        <li><strong>Realizing or identifying something:</strong> After years of searching, he finally found his true
+            passion in painting.</li>
+        <li><strong>Meeting someone unexpectedly:</strong> I didn't expect to find my sister at the coffee shop; it was
+            a pleasant surprise.</li>
+    </ol>
+</div>
 '''}
         ],
         model="gpt-3.5-turbo",
