@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 from openai import OpenAI
 from django.contrib.auth.models import User
-from aiapp.forms import RegisterForm, FeedBackForm  # Assuming your form is in a file named forms.py
+from aiapp.form import RegisterForm, FeedBackForm  # Assuming your form is in a file named forms.py
 
 load_dotenv()
 
