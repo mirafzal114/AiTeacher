@@ -27,8 +27,16 @@ This project aims to assist you in various ways:
 
 ![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/960fc123-776f-451c-b96a-a8b10ec25a29)
 
+
+![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/be71df4c-bd13-4579-8a78-a899c8b0cf86)
+
+### Also we more functions for your which is very useful for u
+![image](https://github.com/mirafzal114/AiTeacher/assets/136591233/a70dad47-4fb3-442a-9373-9ec3e4cfa78c)
+
 ## Getting Started
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/mirafzal114/AiTeacher.git
+   ```
+   
