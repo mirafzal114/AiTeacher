@@ -47,7 +47,48 @@ You can write to us and share your feedback.
 1. Clone the repository:
    ```bash
    git clone https://github.com/mirafzal114/AiTeacher.git
-  
+
+
+2. Run the `pipenv install` command to create a virtual environment and install all dependencies from the `Pipfile.lock` file.
+
+### Working with the project
+
+- To activate the virtual environment, run:
+    ```
+    pipenv shell
+    ```
+- To install new dependencies run:
+    ```
+    pipenv install <package_name>
+    ```
+- To run scripts or an application from your project, use ``pipenv run``.
+
+  **After you have logged into the `(aiteacher) aiteacher` environment, you will have `(aiteacher) aiteacher` in this form.
+
+```bash
+$ python manage.py makemigrations
+```
+
+**This will create all the migration files (database migrations) needed to run this application.
+
+**To apply this migration, run the following command**
+```bash
+$ python manage.py migrate
+```
+**One final step, and then our application will be running. We need to create an admin user to run this application. Type the following command in the terminal and provide a username, password, and email address for the admin user.**
+```bash
+$ python manage.py createsuperuser
+```
+ ** Run the program with
+ **Start the program with the command:**
+```bash
+$ python manage.py runserver
+```
+
+4. Exit the environment:
+    ````bash
+    $ exit
+    ````
 
 
 ## Project using Docker
