@@ -63,7 +63,7 @@ def ielts_checking_view(request):
         essay_text = request.POST.get('essay_text', '')
         result = ielts_checking(essay_text)
         result_end = result
-        return render(request, 'aiapp/essay.html', {'grade': result_end})
+        return render(request, 'aiapp/essey.html', {'grade': result_end})
     return render(request, 'aiapp/home.html')
 
 
@@ -181,17 +181,6 @@ def advice_view(request):
     return render(request, 'aiapp/home.html')
 
 
-def about(request):
-    return render(request, 'aiapp/about.html')
-
-
-def contact(request):
-    return render(request, 'aiapp/contact.html')
-
-
-def service(request):
-    return render(request, 'aiapp/service.html')
-
 
 def register_view(request):
     if request.method == 'POST':
@@ -220,3 +209,15 @@ def feedback_view(request):
         form = FeedBackForm()
 
     return render(request, 'aiapp/contact.html', {'form': form})
+
+
+def about(request):
+    return render(request, 'aiapp/about.html')
+
+
+def contact(request):
+    return render(request, 'aiapp/contact.html')
+
+
+def service(request):
+    return render(request, 'aiapp/service.html')
