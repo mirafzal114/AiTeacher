@@ -1,0 +1,76 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block title %}
+    AiTeacher
+{% endblock title %}
+
+{% block content %}
+
+    <div class="about">
+        <div class="body">
+            <h1>Welcome to essey chekcing</h1>
+            <p>Welcome to EssayChecker!
+            EssayChecker is your go-to platform for essay evaluation. We analyze your essays, provide grades, highlight mistakes, and even offer perfect examples for improvement. Whether you're aiming for academic excellence or looking to enhance your writing skills, EssayChecker has you covered.</p>
+        </div>
+        <div class="img">
+            <img  src="{% static 'logo/zyro-image-removebg-preview.png' %}" alt="">
+        </div>
+
+    </div>
+
+    <div class="main">
+        <div class="essay-page">
+            <div class="left">
+                <h3>
+                    Put your essey in here and then wait.
+                for 15 to 20 seconds, we'll check your
+                essay and give you a grade on the ielts writing scale.
+                and then we'll show you your mistakes and then at the end you can
+                see a perfect example for your topic &#128512;
+
+                </h3>
+                <form method="post" action="{% url 'result' %}">
+                {% csrf_token %}
+                    <textarea name="essay_text" id="essay_text" placeholder="Write your essay here..." class="essay"></textarea>
+                    <input  type="submit" class="check" value="Submit" Check Essay >
+                    {#        <input type="submit" value="Submit">#}
+                    {#        <textarea name="essay_text" id="essay_text" rows="10" cols="30"></textarea><br>#}
+                </form>
+            </div>
+            <div class="right">
+                <img height="400" src="{% static 'logo/zyro-image__1_-removebg-preview.png' %}" alt="">
+            </div>
+        </div>
+        <div class="dict-page">
+            <div style="margin-top: 80px;" class="left">
+                <h3>
+                        here is our dictionary you can find ideas and sentences
+                    and much more just type in the word and you're
+                    see the result &#128526;
+                </h3>
+                <form method="POST" action="{% url 'dictionary' %}">
+                    {% csrf_token %}
+                    <input name="word" id="word" class="dict-input" placeholder="write words" type="text">
+                    <button type="submit" class="check">Use it</button>
+                </form>
+            </div>
+            <div class="right">
+                <img src="{% static 'logo/s-removebg-preview.png' %}" alt="">
+            </div>
+        </div>
+        <div class="advice-page">
+            <div style="margin-top:100px" class="left">
+                <h3>
+                    If you have difficulty with ideas for writing essays or for your speaking topics or lack vocabulary &#128543
+                    <br> we are happy to give you ideas and vocabulary for you  &#x1F60A;
+                </h3>
+                <input class="dict-input" placeholder="Write your topic here ....." type="text">
+                <button class="check">Go looking for </button>
+            </div>
+            <div class="right">
+                <img src="{% static 'logo/advice.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

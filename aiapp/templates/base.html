@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block titile %}{% endblock titile %}</title>
+    <script src="https://kit.fontawesome.com/081c4004bc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <img src="" alt="" class="logo-png">
+                <h1 class="logo-title"><a style="text-decoration: none;color: black" href="/">Ai<span>Teacher</span></a></h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="" class="nav-item">Service</a></li>
+                <li><a href="" class="nav-item">Contact</a></li>
+                <li><a href="" class="nav-item">About</a></li>
+            </ul>
+            <div class="button-start">
+                <i  class="icon-dict fa-solid fa-magnifying-glass"></i>
+                <i  class="icon-dict fa-solid fa-phone"></i>
+                <i   class="icon-dict fa-solid fa-user"></i>
+                <button>Start Now</button>
+            </div>
+        </div>
+    </nav>
+{% block content  %}
+
+{% endblock content %}
+</body>
+</html>
