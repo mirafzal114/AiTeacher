@@ -5,7 +5,7 @@
 }
 body{
     background-color: rgb(243, 64, 147);
-
+    /*justify-content: flex-end;*/
 }
    /*h1,h2,h3,h4,h5,p{*/
    /*     color:white;*/
@@ -79,7 +79,7 @@ span{
 }
 .button-start>button{
     font-size: 20px;
-    padding:20px 30px ;
+    padding:5px 30px ;
     border-radius: 40px;
     background-color: rgb(222, 24, 110);
     opacity: 0.6;
@@ -295,11 +295,11 @@ padding-top: 40px;
   text-decoration: none;
     font-size: 20px;
     transition: 0.3s;
-    color: rgba(255, 255, 255, 0.84);
+    color: rgba(21, 17, 17, 0.84);
 
 }
 .buttons>a:hover{
-  color: black;
+  color: #ec1919;
 
 }
 
@@ -377,4 +377,5 @@ padding-top: 40px;
 }
 /*end feedback page*/
 
-/*flooter*/
+
+/*footer end*/

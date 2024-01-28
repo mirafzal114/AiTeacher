@@ -5,7 +5,6 @@
 {% endblock title %}
 
 {% block content %}
-
     <div class="about">
         <div class="body">
             <h1>Welcome to essey chekcing</h1>
@@ -69,15 +68,17 @@
                     If you have difficulty with ideas for writing essays or for your speaking topics or lack vocabulary &#128543
                     <br> we are happy to give you ideas and vocabulary for you  &#x1F60A;
                 </h3>
-                <input class="dict-input" placeholder="Write your topic here ....." type="text">
-                <button class="check">Go looking for </button>
+                <form method="post" action="{% url 'advice' %}" onsubmit="return showLoading();">
+                {% csrf_token %}
+                    <input class="dict-input" placeholder="Write your topic here ....." type="text">
+                    <button class="check">Go looking for </button>
+                </form>
             </div>
             <div class="right">
                 <img src="{% static 'logo/advice.png' %}" alt="">
             </div>
         </div>
     </div>
-
 
 <script>
 function showLoading() {
@@ -96,9 +97,3 @@ function hideLoading() {
     </script>
 
 {% endblock content %}
-<div class="footers">
-    <div class="about-me"></div>
-    <div class="products"></div>
-    <div class="useful-link"></div>
-    <div class="contact"></div>
-</div>

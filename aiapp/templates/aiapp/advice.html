@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+  Advice
+{% endblock title %}
+
+{% block content %}
+    <div class="essay-result">
+        <h1>Welcome to Ai <span>dictionary</span></h1>
+        {{ result|safe}}
+    </div>
+{% endblock content %}

@@ -31,22 +31,25 @@ def ielts_checking(txt):
             (write here perfect essay example)
             
             display the answer nicely with design html and css code 
-            like this <h1>your ielts writing score:</h1>....
-            make the design text very beautiful 
-            and '<!DOCTYPE html>
-                <html lang="en">
-                <head>
-                <meta charset="UTF-8">
-                <body>'
-                 those parts don't need to be written
+            kind off:
+    <h1 style="font-family: 'Lucida Grande', Arial, sans-serif">An approximate IELTS Writing Task 2 grade for this essay is '5.5'  &#127882</h1>
+    <h2 style="font-family: 'Lucida Grande', Arial, sans-serif">Your Mistakes &#128269;: </h2>
+    <ul class="mistakes">
+        <li>1 ....</li>
+        <li>2 ...</li>
+        <li>3...</li>
+        <li>4 ...</li>
+        <li>5 ...</li>
+    </ul>
+        <h2>Here is a perfect example for your topic: </h2>
+        <p>essay ..........</p>
+            make the design more beautiful beautiful 
             '''}
         ],
         model="gpt-3.5-turbo",
     )
 
-    # Extract relevant information from the model response
     response_content = chat_completion.choices[0].message.content
-    # Parse the response and format it as needed
     return response_content
 
 
@@ -124,6 +127,7 @@ answer like this
             a pleasant surprise.</li>
     </ol>
 </div>
+continue write more information as much as possible
 '''}
         ],
         model="gpt-3.5-turbo",
@@ -141,6 +145,38 @@ def dict_view(request):
                                                          'word':word})
     return render(request, 'aiapp/home.html')
 
+
+def advice(topic):
+    api_key = os.getenv("demokey")
+    if not api_key:
+        return "API key not found. Please set your OpenAI API key."
+    client = OpenAI(api_key=api_key)
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": f'''
+                write to this '{topic}' topic
+                more ideas for writing essay ..
+                write it on html like this 
+                <h4> ......</h4>
+'''}
+        ],
+        model="gpt-3.5-turbo",
+    )
+
+    response_content = chat_completion.choices[0].message.content
+
+    return response_content
+
+
+def advice_view(request):
+    if request.method == 'POST':
+        topic = request.POST.get('topic', '')
+        result = advice(topic)
+        return render(request, 'aiapp/advice.html', {'result':result})
+
+    return render(request, 'aiapp/home.html')
 
 
 def about(request):
