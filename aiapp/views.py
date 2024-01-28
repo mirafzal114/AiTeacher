@@ -1,13 +1,10 @@
 from django.shortcuts import render, redirect
 import os
-import re
 from dotenv import load_dotenv
 from openai import OpenAI
-from django import forms
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
-from aiapp.form import RegisterForm
+from django.contrib import messages
+from aiapp.form import RegisterForm, FeedBackForm
 
 load_dotenv()
 def ielts_checking(txt):
@@ -200,11 +197,24 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save()
-            # Дополнительные действия после успешной регистрации, если необходимо
-            # Например, создание профиля пользователя
             User.objects.create(user=user)
-            return redirect('login')  # Перенаправление на страницу входа
+            return redirect('login')
     else:
         form = RegisterForm()
 
     return render(request, 'aiapp/register.html', {'form': form})
+
+
+def feedback_view(request):
+    if request.method == 'POST':
+        form = FeedBackForm(request.POST)
+        if form.is_valid():
+            feedback_instance = form.save(commit=False)
+            feedback_instance.user = request.user
+            feedback_instance.save()
+            messages.success(request, 'Thanks for your feedback!')
+            return redirect('contact-page')
+    else:
+        form = FeedBackForm()
+
+    return render(request, 'aiapp/contact.html', {'form': form})
