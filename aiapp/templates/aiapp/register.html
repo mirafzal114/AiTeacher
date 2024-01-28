@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Create an Account{% endblock %}
 {#{% load crispy_forms_tags %}#}
 
 {% block content %}
 
     <div class="register-form">
+        <img class="regis-img"  height="500" src="{% static 'register.png' %}" alt="">
   <form method="POST" action="{% url 'register' %}" class="form-group">
     {% csrf_token %}
     <h1 style="text-align: center; font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace">Sign Up</h1>

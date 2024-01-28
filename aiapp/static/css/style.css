@@ -395,7 +395,13 @@ span {
     width: 80%;
     margin: auto;
     height: 100vh;
-    padding-top: 50px;
+
+    display: flex;
+}
+.regis-img{
+    margin-top: 70px;
+    opacity: 0.6;
+
 }
 
 .form-group {
