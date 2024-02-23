@@ -76,8 +76,11 @@ WSGI_APPLICATION = 'AiTeacher.wsgi.app'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'verceldb',
+        'HOST': 'ep-flat-salad-a4oopa1r-pooler.us-east-1.aws.neon.tech',
+        'USER': 'default',
+        'PASSWORD': 'FMoqE3iRZH4A',
     }
 }
 
