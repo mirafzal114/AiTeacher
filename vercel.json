@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "AiTeacher/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "AiTeacher/wsgi.py"
+    }
+  ]
+}

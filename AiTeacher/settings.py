@@ -23,9 +23,9 @@ TEMPLATES_DIRS = BASE_DIR / 'templates'
 SECRET_KEY = 'django-insecure-h$i9%d=jdlyi1d$@7ob%6nm#wj7#34^gd3^j2r*fw7p!zhsgw&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*', '127.0.0.1', '.vercel.app']
 
 
 # Application definition
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'AiTeacher.wsgi.application'
+WSGI_APPLICATION = 'AiTeacher.wsgi.app'
 
 
 # Database
@@ -114,9 +114,8 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-
-STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'static'
+STATIC_URL = 'static/'
 
 # Media files
 MEDIA_URL = '/media/'
